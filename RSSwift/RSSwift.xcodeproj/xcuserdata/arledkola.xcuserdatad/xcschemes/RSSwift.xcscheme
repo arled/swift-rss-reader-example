@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0600"
+   LastUpgradeVersion = "0610"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F35B82D419CD9CF400B4B424"
+               BlueprintIdentifier = "F346148619FF2F6300DB2CE3"
                BuildableName = "RSSwift.app"
                BlueprintName = "RSSwift"
                ReferencedContainer = "container:RSSwift.xcodeproj">
@@ -28,7 +28,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F35B82EC19CD9CF400B4B424"
+               BlueprintIdentifier = "F346149E19FF2F6400DB2CE3"
                BuildableName = "RSSwiftTests.xctest"
                BlueprintName = "RSSwiftTests"
                ReferencedContainer = "container:RSSwift.xcodeproj">
@@ -46,7 +46,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F35B82EC19CD9CF400B4B424"
+               BlueprintIdentifier = "F346149E19FF2F6400DB2CE3"
                BuildableName = "RSSwiftTests.xctest"
                BlueprintName = "RSSwiftTests"
                ReferencedContainer = "container:RSSwift.xcodeproj">
@@ -56,7 +56,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F35B82D419CD9CF400B4B424"
+            BlueprintIdentifier = "F346148619FF2F6300DB2CE3"
             BuildableName = "RSSwift.app"
             BlueprintName = "RSSwift"
             ReferencedContainer = "container:RSSwift.xcodeproj">
@@ -75,7 +75,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F35B82D419CD9CF400B4B424"
+            BlueprintIdentifier = "F346148619FF2F6300DB2CE3"
             BuildableName = "RSSwift.app"
             BlueprintName = "RSSwift"
             ReferencedContainer = "container:RSSwift.xcodeproj">
@@ -93,7 +93,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F35B82D419CD9CF400B4B424"
+            BlueprintIdentifier = "F346148619FF2F6300DB2CE3"
             BuildableName = "RSSwift.app"
             BlueprintName = "RSSwift"
             ReferencedContainer = "container:RSSwift.xcodeproj">

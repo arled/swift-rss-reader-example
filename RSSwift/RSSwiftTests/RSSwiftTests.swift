@@ -2,7 +2,7 @@
 //  RSSwiftTests.swift
 //  RSSwiftTests
 //
-//  Created by Arled Kola on 20/09/2014.
+//  Created by Arled Kola on 28/10/2014.
 //  Copyright (c) 2014 Arled. All rights reserved.
 //
 

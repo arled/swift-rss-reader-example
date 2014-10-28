@@ -24,7 +24,7 @@ class NewFeedViewController: UIViewController {
     @IBAction func doneTapped(sender: AnyObject) {
         
         // Send new Url
-        self.onDataAvailable?(data: NSURL(string: textFieldNewFeedUrl.text))
+        self.onDataAvailable?(data: NSURL(string: textFieldNewFeedUrl.text)!)
         self.navigationController?.popToRootViewControllerAnimated(true)
     }
 

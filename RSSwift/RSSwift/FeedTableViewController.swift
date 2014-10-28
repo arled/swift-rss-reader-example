@@ -11,6 +11,7 @@ import UIKit
 class FeedTableViewController: UITableViewController, UITableViewDataSource, UITableViewDelegate, NSXMLParserDelegate {
 
     var myFeed : NSArray = []
+    var url: NSURL = NSURL()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +22,7 @@ class FeedTableViewController: UITableViewController, UITableViewDataSource, UIT
         self.tableView.delegate = self
         
         // Set feed url. http://www.formula1.com/rss/news/latest.rss
-        var url: NSURL = NSURL.URLWithString("http://www.skysports.com/rss/0,20514,11661,00.xml")
+        url = NSURL(string: "http://www.skysports.com/rss/0,20514,11661,00.xml")!
         // XmlParserManager instance/object/variable
         loadRss(url);
 
@@ -88,7 +89,7 @@ class FeedTableViewController: UITableViewController, UITableViewDataSource, UIT
         var dict : NSDictionary! = myFeed.objectAtIndex(indexPath.row) as NSDictionary
         
         //set cell properties
-        cell.textLabel?.text = myFeed.objectAtIndex(indexPath.row).objectForKey("title") as? String
+        cell.textLabel.text = myFeed.objectAtIndex(indexPath.row).objectForKey("title") as? String
 
         cell.detailTextLabel?.text = myFeed.objectAtIndex(indexPath.row).objectForKey("pubDate") as? String
 

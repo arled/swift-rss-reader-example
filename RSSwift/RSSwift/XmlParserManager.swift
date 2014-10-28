@@ -27,7 +27,7 @@ class XmlParserManager: NSObject, NSXMLParserDelegate {
     
     func startParse(url :NSURL) {
         feeds = []
-        parser = NSXMLParser(contentsOfURL: url)
+        parser = NSXMLParser(contentsOfURL: url)!
         parser.delegate = self
         parser.shouldProcessNamespaces = false
         parser.shouldReportNamespacePrefixes = false
