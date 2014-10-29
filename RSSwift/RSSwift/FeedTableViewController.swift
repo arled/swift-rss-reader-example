@@ -89,7 +89,7 @@ class FeedTableViewController: UITableViewController, UITableViewDataSource, UIT
         var dict : NSDictionary! = myFeed.objectAtIndex(indexPath.row) as NSDictionary
         
         //set cell properties
-        cell.textLabel.text = myFeed.objectAtIndex(indexPath.row).objectForKey("title") as? String
+        cell.textLabel?.text = myFeed.objectAtIndex(indexPath.row).objectForKey("title") as? String
 
         cell.detailTextLabel?.text = myFeed.objectAtIndex(indexPath.row).objectForKey("pubDate") as? String
 
