@@ -23,13 +23,13 @@ class FeedTableViewController: UITableViewController, UITableViewDataSource, UIT
         
         // Set feed url. http://www.formula1.com/rss/news/latest.rss
         url = NSURL(string: "http://www.skysports.com/rss/0,20514,11661,00.xml")!
-        // XmlParserManager instance/object/variable
+        // Call custom function.
         loadRss(url);
 
     }
     
     func loadRss(data: NSURL) {
-        // populate
+        // XmlParserManager instance/object/variable
         var myParser : XmlParserManager = XmlParserManager.alloc().initWithURL(data) as XmlParserManager
         // Put feed in array
         myFeed = myParser.feeds
@@ -88,8 +88,12 @@ class FeedTableViewController: UITableViewController, UITableViewDataSource, UIT
         // Feeds dictionary.
         var dict : NSDictionary! = myFeed.objectAtIndex(indexPath.row) as NSDictionary
         
-        //set cell properties
-        cell.textLabel?.text = myFeed.objectAtIndex(indexPath.row).objectForKey("title") as? String
+        // Set cell properties.
+        cell.textLabel.text = myFeed.objectAtIndex(indexPath.row).objectForKey("title") as? String
+        
+        // It seems that cell.textLabel?.text is no longer an optionional.
+        // If the above line throws an error then comment it out and uncomment the below line.
+        //cell.textLabel?.text = myFeed.objectAtIndex(indexPath.row).objectForKey("title") as? String
 
         cell.detailTextLabel?.text = myFeed.objectAtIndex(indexPath.row).objectForKey("pubDate") as? String
 
