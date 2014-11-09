@@ -1,7 +1,7 @@
 RSSwift
 =======
 
-App ScreenShot
+A Swift RSS Reader
 
 [App Demo](http://youtu.be/7cLXIWeXIWc)
 
