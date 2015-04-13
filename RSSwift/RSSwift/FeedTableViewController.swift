@@ -90,10 +90,6 @@ class FeedTableViewController: UITableViewController, UITableViewDataSource, UIT
         
         // Set cell properties.
         cell.textLabel?.text = myFeed.objectAtIndex(indexPath.row).objectForKey("title") as? String
-        
-        // It seems that cell.textLabel?.text is no longer an optionional.
-        // If the above line throws an error then comment it out and uncomment the below line.
-        //cell.textLabel?.text = myFeed.objectAtIndex(indexPath.row).objectForKey("title") as? String
 
         cell.detailTextLabel?.text = myFeed.objectAtIndex(indexPath.row).objectForKey("pubDate") as? String
 
