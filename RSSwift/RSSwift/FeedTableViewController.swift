@@ -30,7 +30,7 @@ class FeedTableViewController: UITableViewController, UITableViewDataSource, UIT
     
     func loadRss(data: NSURL) {
         // XmlParserManager instance/object/variable
-        var myParser : XmlParserManager = XmlParserManager.alloc().initWithURL(data) as XmlParserManager
+        var myParser : XmlParserManager = XmlParserManager.alloc().initWithURL(data) as! XmlParserManager
         // Put feed in array
         myFeed = myParser.feeds
         
@@ -57,12 +57,12 @@ class FeedTableViewController: UITableViewController, UITableViewDataSource, UIT
             
             var indexPath: NSIndexPath = self.tableView.indexPathForSelectedRow()!
             //let selectedFeedURL: String = feeds[indexPath.row].objectForKey("link") as String
-            let selectedFTitle: String = myFeed[indexPath.row].objectForKey("title") as String
-            let selectedFContent: String = myFeed[indexPath.row].objectForKey("description") as String
-            let selectedFURL: String = myFeed[indexPath.row].objectForKey("link") as String
+            let selectedFTitle: String = myFeed[indexPath.row].objectForKey("title") as! String
+            let selectedFContent: String = myFeed[indexPath.row].objectForKey("description") as! String
+            let selectedFURL: String = myFeed[indexPath.row].objectForKey("link") as! String
             
             // Instance of our feedpageviewcontrolelr
-            let fpvc: FeedPageViewController = segue.destinationViewController as FeedPageViewController
+            let fpvc: FeedPageViewController = segue.destinationViewController as! FeedPageViewController
 
             fpvc.selectedFeedTitle = selectedFTitle
             fpvc.selectedFeedFeedContent = selectedFContent
@@ -83,13 +83,13 @@ class FeedTableViewController: UITableViewController, UITableViewDataSource, UIT
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! UITableViewCell
         
         // Feeds dictionary.
-        var dict : NSDictionary! = myFeed.objectAtIndex(indexPath.row) as NSDictionary
+        var dict : NSDictionary! = myFeed.objectAtIndex(indexPath.row) as! NSDictionary
         
         // Set cell properties.
-        cell.textLabel.text = myFeed.objectAtIndex(indexPath.row).objectForKey("title") as? String
+        cell.textLabel?.text = myFeed.objectAtIndex(indexPath.row).objectForKey("title") as? String
         
         // It seems that cell.textLabel?.text is no longer an optionional.
         // If the above line throws an error then comment it out and uncomment the below line.

@@ -38,9 +38,8 @@ class XmlParserManager: NSObject, NSXMLParserDelegate {
     func allFeeds() -> NSMutableArray {
         return feeds
     }
-    
-    func parser(parser: NSXMLParser!, didStartElement elementName: String!, namespaceURI: String!, qualifiedName: String!, attributes attributeDict: NSDictionary!) {
-        
+
+    func parser(parser: NSXMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [NSObject : AnyObject]) {
         element = elementName
         
         if (element as NSString).isEqualToString("item") {
@@ -55,10 +54,9 @@ class XmlParserManager: NSObject, NSXMLParserDelegate {
             fdate = NSMutableString.alloc()
             fdate = ""
         }
-
     }
     
-    func parser(parser: NSXMLParser!, didEndElement elementName: String!, namespaceURI: String!, qualifiedName qName: String!) {
+    func parser(parser: NSXMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
         
         if (elementName as NSString).isEqualToString("item") {
             if ftitle != "" {
@@ -82,16 +80,16 @@ class XmlParserManager: NSObject, NSXMLParserDelegate {
         
     }
     
-    func parser(parser: NSXMLParser!, foundCharacters string: String!) {
+    func parser(parser: NSXMLParser, foundCharacters string: String?) {
         
         if element.isEqualToString("title") {
-            ftitle.appendString(string)
+            ftitle.appendString(string!)
         } else if element.isEqualToString("link") {
-            link.appendString(string)
+            link.appendString(string!)
         }else if element.isEqualToString("description") {
-            fdescription.appendString(string)
+            fdescription.appendString(string!)
         }else if element.isEqualToString("pubDate") {
-            fdate.appendString(string)
+            fdate.appendString(string!)
         }
     }
 

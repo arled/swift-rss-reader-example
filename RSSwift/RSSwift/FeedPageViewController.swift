@@ -31,7 +31,7 @@ class FeedPageViewController: UIViewController {
         
         if segue.identifier == "openWebPage" {
             
-            let fwpvc: FeedWebPageViewController = segue.destinationViewController as FeedWebPageViewController
+            let fwpvc: FeedWebPageViewController = segue.destinationViewController as! FeedWebPageViewController
             selectedFeedURL =  selectedFeedURL.stringByReplacingOccurrencesOfString(" ", withString:"")
             selectedFeedURL =  selectedFeedURL.stringByReplacingOccurrencesOfString("\n", withString:"")
             fwpvc.feedURL = selectedFeedURL
