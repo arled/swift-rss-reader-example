@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BOL-L4-de8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BOL-L4-de8">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -109,20 +109,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Odo-wU-160">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vqQ-E5-NbH">
+                                <rect key="frame" x="0.0" y="0.0" width="611" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                            </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Odo-wU-160" firstAttribute="leading" secondItem="5Em-OQ-lv1" secondAttribute="leadingMargin" constant="-16" id="AxX-12-YKq"/>
-                            <constraint firstItem="IV8-xf-Sm3" firstAttribute="top" secondItem="Odo-wU-160" secondAttribute="bottom" id="SkA-CU-oLM"/>
-                            <constraint firstItem="Odo-wU-160" firstAttribute="top" secondItem="5Em-OQ-lv1" secondAttribute="topMargin" id="Szq-dp-hXa"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Odo-wU-160" secondAttribute="trailing" constant="-16" id="veA-Hb-KBa"/>
+                            <constraint firstItem="IV8-xf-Sm3" firstAttribute="top" secondItem="vqQ-E5-NbH" secondAttribute="bottom" id="0se-IW-iFw"/>
+                            <constraint firstItem="vqQ-E5-NbH" firstAttribute="leading" secondItem="5Em-OQ-lv1" secondAttribute="leadingMargin" constant="-16" id="Gp4-CB-1FJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vqQ-E5-NbH" secondAttribute="trailing" constant="-27" id="hWb-6F-srh"/>
+                            <constraint firstItem="vqQ-E5-NbH" firstAttribute="top" secondItem="5Em-OQ-lv1" secondAttribute="topMargin" id="vt9-ML-6JY"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Feed Page" id="bsM-tg-B6F">
@@ -133,7 +130,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="textView" destination="Odo-wU-160" id="xc2-HG-un4"/>
+                        <outlet property="myWebView" destination="vqQ-E5-NbH" id="lHv-mX-6ya"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kiX-oe-X5d" userLabel="First Responder" sceneMemberID="firstResponder"/>

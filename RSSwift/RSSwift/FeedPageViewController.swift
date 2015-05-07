@@ -11,6 +11,7 @@ import UIKit
 class FeedPageViewController: UIViewController {
 
     @IBOutlet var textView: UITextView!
+    @IBOutlet weak var myWebView: UIWebView!
     
     var selectedFeedTitle = String()
     var selectedFeedFeedContent = String()
@@ -18,13 +19,10 @@ class FeedPageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        textView.editable = false
-        textView.contentInset = UIEdgeInsets(top: +60,left: 0,bottom: 0,right: 0)
-        // Populate Text Area
-        textView.text = "\(selectedFeedTitle)\n\n\(selectedFeedFeedContent)"
 
-        // Do any additional setup after loading the view.
+        // Do any additional setup after loading the view, typically from a nib.
+        var feedContent:String! = "<h3>\(selectedFeedTitle)</h3>\(selectedFeedFeedContent)"
+        myWebView.loadHTMLString(feedContent, baseURL: nil)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
