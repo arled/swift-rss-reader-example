@@ -46,7 +46,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="RSSwift" id="qzB-2c-Ep7">
-                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="TFS-7z-sM7">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="TFS-7z-sM7">
                             <connections>
                                 <segue destination="eUq-bF-vjD" kind="show" id="VVe-1F-HlP"/>
                             </connections>
