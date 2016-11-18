@@ -8,9 +8,9 @@
 
 import Foundation
 
-class XmlParserManager: NSObject, NSXMLParserDelegate {
+class XmlParserManager: NSObject, XMLParserDelegate {
     
-    var parser = NSXMLParser()
+    var parser = XMLParser()
     var feeds = NSMutableArray()
     var elements = NSMutableDictionary()
     var element = NSString()
@@ -20,14 +20,14 @@ class XmlParserManager: NSObject, NSXMLParserDelegate {
     var fdate = NSMutableString()
     
     // initilise parser
-    func initWithURL(url :NSURL) -> AnyObject {
+    func initWithURL(_ url :URL) -> AnyObject {
         startParse(url)
         return self
     }
     
-    func startParse(url :NSURL) {
+    func startParse(_ url :URL) {
         feeds = []
-        parser = NSXMLParser(contentsOfURL: url)!
+        parser = XMLParser(contentsOf: url)!
         parser.delegate = self
         parser.shouldProcessNamespaces = false
         parser.shouldReportNamespacePrefixes = false
@@ -38,58 +38,58 @@ class XmlParserManager: NSObject, NSXMLParserDelegate {
     func allFeeds() -> NSMutableArray {
         return feeds
     }
-
-    func parser(parser: NSXMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [NSObject : AnyObject]) {
-        element = elementName
+    
+    func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String]) {
+        element = elementName as NSString
         
-        if (element as NSString).isEqualToString("item") {
-            elements = NSMutableDictionary.alloc()
+        if (element as NSString).isEqual(to: "item") {
+            elements =  NSMutableDictionary()
             elements = [:]
-            ftitle = NSMutableString.alloc()
+            ftitle = NSMutableString()
             ftitle = ""
-            link = NSMutableString.alloc()
+            link = NSMutableString()
             link = ""
-            fdescription = NSMutableString.alloc()
+            fdescription = NSMutableString()
             fdescription = ""
-            fdate = NSMutableString.alloc()
+            fdate = NSMutableString()
             fdate = ""
         }
     }
     
-    func parser(parser: NSXMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
+    func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
         
-        if (elementName as NSString).isEqualToString("item") {
+        if (elementName as NSString).isEqual(to: "item") {
             if ftitle != "" {
-                elements.setObject(ftitle, forKey: "title")
+                elements.setObject(ftitle, forKey: "title" as NSCopying)
             }
             
             if link != "" {
-                elements.setObject(link, forKey: "link")
+                elements.setObject(link, forKey: "link" as NSCopying)
             }
             
             if fdescription != "" {
-                elements.setObject(fdescription, forKey: "description")
+                elements.setObject(fdescription, forKey: "description" as NSCopying)
             }
             
             if fdate != "" {
-                elements.setObject(fdate, forKey: "pubDate")
+                elements.setObject(fdate, forKey: "pubDate" as NSCopying)
             }
             
-            feeds.addObject(elements)
+            feeds.add(elements)
         }
         
     }
     
-    func parser(parser: NSXMLParser, foundCharacters string: String?) {
+    func parser(_ parser: XMLParser, foundCharacters string: String) {
         
-        if element.isEqualToString("title") {
-            ftitle.appendString(string!)
-        } else if element.isEqualToString("link") {
-            link.appendString(string!)
-        }else if element.isEqualToString("description") {
-            fdescription.appendString(string!)
-        }else if element.isEqualToString("pubDate") {
-            fdate.appendString(string!)
+        if element.isEqual(to: "title") {
+            ftitle.append(string)
+        } else if element.isEqual(to: "link") {
+            link.append(string)
+        }else if element.isEqual(to: "description") {
+            fdescription.append(string)
+        }else if element.isEqual(to: "pubDate") {
+            fdate.append(string)
         }
     }
 

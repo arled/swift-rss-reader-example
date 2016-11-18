@@ -13,7 +13,7 @@ class NewFeedViewController: UIViewController {
     @IBOutlet var textFieldNewFeedUrl: UITextField!
     
     // Reusbale member
-    var onDataAvailable : ((data: NSURL) -> ())?
+    var onDataAvailable : ((_ data: URL) -> ())?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,14 +21,14 @@ class NewFeedViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func doneTapped(sender: AnyObject) {
+    @IBAction func doneTapped(_ sender: AnyObject) {
         
         // Send new Url
         if (textFieldNewFeedUrl.text != "") {
-            self.onDataAvailable?(data: NSURL(string: textFieldNewFeedUrl.text)!)
-            self.navigationController?.popToRootViewControllerAnimated(true)
+            self.onDataAvailable?(URL(string: textFieldNewFeedUrl.text!)!)
+//            self.navigationController?.popToRootViewController(animated: true)
         } else {
-            self.navigationController?.popToRootViewControllerAnimated(true)
+//            self.navigationController?.popToRootViewController(animated: true)
         }
     }
 

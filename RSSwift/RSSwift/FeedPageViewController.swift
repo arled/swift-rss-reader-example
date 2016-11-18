@@ -21,17 +21,17 @@ class FeedPageViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view, typically from a nib.
-        var feedContent:String! = "<h3>\(selectedFeedTitle)</h3>\(selectedFeedFeedContent)"
+        let feedContent:String! = "<h3>\(selectedFeedTitle)</h3>\(selectedFeedFeedContent)"
         myWebView.loadHTMLString(feedContent, baseURL: nil)
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
         
         if segue.identifier == "openWebPage" {
             
-            let fwpvc: FeedWebPageViewController = segue.destinationViewController as! FeedWebPageViewController
-            selectedFeedURL =  selectedFeedURL.stringByReplacingOccurrencesOfString(" ", withString:"")
-            selectedFeedURL =  selectedFeedURL.stringByReplacingOccurrencesOfString("\n", withString:"")
+            let fwpvc: FeedWebPageViewController = segue.destination as! FeedWebPageViewController
+            selectedFeedURL =  selectedFeedURL.replacingOccurrences(of: " ", with:"")
+            selectedFeedURL =  selectedFeedURL.replacingOccurrences(of: "\n", with:"")
             fwpvc.feedURL = selectedFeedURL
         }
     }
