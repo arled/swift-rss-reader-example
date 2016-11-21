@@ -1,9 +1,9 @@
 //
 //  XmlParserManager.swift
-//  RSSwift
+//  Rsswift
 //
-//  Created by Arled Kola on 20/10/2014.
-//  Copyright (c) 2014 Arled. All rights reserved.
+//  Created by Arled Kola on 18/11/2016.
+//  Copyright © 2016 ArledKola. All rights reserved.
 //
 
 import Foundation
@@ -16,6 +16,7 @@ class XmlParserManager: NSObject, XMLParserDelegate {
     var element = NSString()
     var ftitle = NSMutableString()
     var link = NSMutableString()
+    var img:  [AnyObject] = []
     var fdescription = NSMutableString()
     var fdate = NSMutableString()
     
@@ -41,7 +42,6 @@ class XmlParserManager: NSObject, XMLParserDelegate {
     
     func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String]) {
         element = elementName as NSString
-        
         if (element as NSString).isEqual(to: "item") {
             elements =  NSMutableDictionary()
             elements = [:]
@@ -53,45 +53,41 @@ class XmlParserManager: NSObject, XMLParserDelegate {
             fdescription = ""
             fdate = NSMutableString()
             fdate = ""
+        } else if (element as NSString).isEqual(to: "enclosure") {
+            if let urlString = attributeDict["url"] {
+                img.append(urlString as AnyObject)
+            }
         }
     }
     
     func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
-        
+
         if (elementName as NSString).isEqual(to: "item") {
             if ftitle != "" {
                 elements.setObject(ftitle, forKey: "title" as NSCopying)
             }
-            
             if link != "" {
                 elements.setObject(link, forKey: "link" as NSCopying)
             }
-            
             if fdescription != "" {
                 elements.setObject(fdescription, forKey: "description" as NSCopying)
             }
-            
             if fdate != "" {
                 elements.setObject(fdate, forKey: "pubDate" as NSCopying)
             }
-            
             feeds.add(elements)
         }
-        
     }
     
     func parser(_ parser: XMLParser, foundCharacters string: String) {
-        
         if element.isEqual(to: "title") {
             ftitle.append(string)
         } else if element.isEqual(to: "link") {
             link.append(string)
-        }else if element.isEqual(to: "description") {
+        } else if element.isEqual(to: "description") {
             fdescription.append(string)
-        }else if element.isEqual(to: "pubDate") {
+        } else if element.isEqual(to: "pubDate") {
             fdate.append(string)
         }
     }
-
-    
 }

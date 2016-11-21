@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>RSSwift.xcscheme</key>
+		<key>Rsswift.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,12 +12,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>F346148619FF2F6300DB2CE3</key>
+		<key>703266401DDF6E3D006CC1B5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F346149E19FF2F6400DB2CE3</key>
+		<key>703266571DDF6E3D006CC1B5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>703266621DDF6E3D006CC1B5</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -1,15 +1,15 @@
 //
-//  RSSwiftTests.swift
-//  RSSwiftTests
+//  RsswiftTests.swift
+//  RsswiftTests
 //
-//  Created by Arled Kola on 28/10/2014.
-//  Copyright (c) 2014 Arled. All rights reserved.
+//  Created by Arled Kola on 18/11/2016.
+//  Copyright © 2016 ArledKola. All rights reserved.
 //
 
-import UIKit
 import XCTest
+@testable import Rsswift
 
-class RSSwiftTests: XCTestCase {
+class RsswiftTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
@@ -23,12 +23,12 @@ class RSSwiftTests: XCTestCase {
     
     func testExample() {
         // This is an example of a functional test case.
-        XCTAssert(true, "Pass")
+        // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
     
     func testPerformanceExample() {
         // This is an example of a performance test case.
-        self.measure() {
+        self.measure {
             // Put the code you want to measure the time of here.
         }
     }

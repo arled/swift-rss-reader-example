@@ -14,24 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F346148619FF2F6300DB2CE3"
-               BuildableName = "RSSwift.app"
-               BlueprintName = "RSSwift"
-               ReferencedContainer = "container:RSSwift.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F346149E19FF2F6400DB2CE3"
-               BuildableName = "RSSwiftTests.xctest"
-               BlueprintName = "RSSwiftTests"
-               ReferencedContainer = "container:RSSwift.xcodeproj">
+               BlueprintIdentifier = "703266401DDF6E3D006CC1B5"
+               BuildableName = "Rsswift.app"
+               BlueprintName = "Rsswift"
+               ReferencedContainer = "container:Rsswift.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -46,20 +32,30 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F346149E19FF2F6400DB2CE3"
-               BuildableName = "RSSwiftTests.xctest"
-               BlueprintName = "RSSwiftTests"
-               ReferencedContainer = "container:RSSwift.xcodeproj">
+               BlueprintIdentifier = "703266571DDF6E3D006CC1B5"
+               BuildableName = "RsswiftTests.xctest"
+               BlueprintName = "RsswiftTests"
+               ReferencedContainer = "container:Rsswift.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "703266621DDF6E3D006CC1B5"
+               BuildableName = "RsswiftUITests.xctest"
+               BlueprintName = "RsswiftUITests"
+               ReferencedContainer = "container:Rsswift.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F346148619FF2F6300DB2CE3"
-            BuildableName = "RSSwift.app"
-            BlueprintName = "RSSwift"
-            ReferencedContainer = "container:RSSwift.xcodeproj">
+            BlueprintIdentifier = "703266401DDF6E3D006CC1B5"
+            BuildableName = "Rsswift.app"
+            BlueprintName = "Rsswift"
+            ReferencedContainer = "container:Rsswift.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -79,10 +75,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F346148619FF2F6300DB2CE3"
-            BuildableName = "RSSwift.app"
-            BlueprintName = "RSSwift"
-            ReferencedContainer = "container:RSSwift.xcodeproj">
+            BlueprintIdentifier = "703266401DDF6E3D006CC1B5"
+            BuildableName = "Rsswift.app"
+            BlueprintName = "Rsswift"
+            ReferencedContainer = "container:Rsswift.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -98,10 +94,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F346148619FF2F6300DB2CE3"
-            BuildableName = "RSSwift.app"
-            BlueprintName = "RSSwift"
-            ReferencedContainer = "container:RSSwift.xcodeproj">
+            BlueprintIdentifier = "703266401DDF6E3D006CC1B5"
+            BuildableName = "Rsswift.app"
+            BlueprintName = "Rsswift"
+            ReferencedContainer = "container:Rsswift.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
