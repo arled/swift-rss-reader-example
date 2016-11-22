@@ -53,6 +53,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Feed List" id="GKp-vD-lsM">
+                        <barButtonItem key="leftBarButtonItem" systemItem="refresh" id="nog-yp-jD6">
+                            <connections>
+                                <action selector="refreshFeed:" destination="5t8-Wk-34u" id="viF-cz-ugf"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Feeds" id="Q3p-cY-pRK">
                             <connections>
                                 <segue destination="5um-yg-MGE" kind="show" id="3QR-E6-prS"/>

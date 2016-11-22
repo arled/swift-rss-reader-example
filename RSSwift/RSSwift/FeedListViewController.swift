@@ -16,17 +16,24 @@ class FeedListViewController: UITableViewController, XMLParserDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Row height.
+
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 140
-
+        tableView.backgroundColor = UIColorFromRGB(rgbValue: 0x00B6ED)
         self.tableView.dataSource = self
         self.tableView.delegate = self
+        
+        loadData()
+    }
+    
+    @IBAction func refreshFeed(_ sender: Any) {
 
+        loadData()
+    }
+    
+    func loadData() {
         url = URL(string: "http://feeds.skynews.com/feeds/rss/technology.xml")!
         loadRss(url);
-        tableView.backgroundColor = UIColorFromRGB(rgbValue: 0x00B6ED)
     }
     
     func loadRss(_ data: URL) {
@@ -82,7 +89,6 @@ class FeedListViewController: UITableViewController, XMLParserDelegate {
         cellImageLayer!.cornerRadius = 35
         cellImageLayer!.masksToBounds = true
         cell.imageView?.image = image
-        
         cell.textLabel?.text = (myFeed.object(at: indexPath.row) as AnyObject).object(forKey: "title") as? String
         cell.textLabel?.textColor = UIColor.white
         cell.textLabel?.numberOfLines = 0
