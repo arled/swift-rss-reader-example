@@ -1,5 +1,5 @@
-A simple RSS xml reader swift 3
+<h2> A simple RSS reader example - Swift 3 </h2>
 
-Great for kick starting your very own RSS reader app.
+<strong>Great for kick starting your very own RSS reader app.</strong>
 
 ![alt tag](https://github.com/arled/RSS-xml-reader-swift-3/blob/master/RSSwift/RSSwift/feed.png)
