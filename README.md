@@ -1,4 +1,4 @@
-<h2> A simple RSS reader example - Swift 3 </h2>
+<h2> A simple RSS reader example written Swift </h2>
 
 <strong>Great for kick starting your very own RSS reader app.</strong>
 
