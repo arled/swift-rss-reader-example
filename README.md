@@ -5,7 +5,5 @@
 Dear community, 
 Feel free to contribute to this repo.
 
-![alt tag](https://github.com/arled/RSS-xml-reader-swift-3/blob/master/RSSwift/RSSwift/feed.png)
-
-![alt tag](http://gph.is/2I9YpD8)
+![alt tag](https://media.giphy.com/media/dYiVe4w7ostLjZy3Sa/giphy.gif)
 
