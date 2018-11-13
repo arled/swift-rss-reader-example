@@ -5,5 +5,5 @@
 Dear community,
 Feel free to contribute to this repo.
 
-![alt tag](https://media.giphy.com/media/fR4u5yG2qfjqGkZHnE/giphy.gif)
+![demo giphy](https://media.giphy.com/media/fR4u5yG2qfjqGkZHnE/giphy.gif)
 
