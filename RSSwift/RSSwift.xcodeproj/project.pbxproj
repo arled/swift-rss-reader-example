@@ -16,7 +16,7 @@
 		703266681DDF6E3D006CC1B5 /* RsswiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 703266671DDF6E3D006CC1B5 /* RsswiftUITests.swift */; };
 		703266761DDF705D006CC1B5 /* XmlParserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 703266751DDF705D006CC1B5 /* XmlParserManager.swift */; };
 		703266781DDF709F006CC1B5 /* FeedListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 703266771DDF709F006CC1B5 /* FeedListViewController.swift */; };
-		7032667A1DDF7131006CC1B5 /* FeedItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 703266791DDF7131006CC1B5 /* FeedItemViewController.swift */; };
+		7072F4452238210C00458EC1 /* FeedItemWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7072F4442238210C00458EC1 /* FeedItemWebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +52,7 @@
 		703266691DDF6E3D006CC1B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		703266751DDF705D006CC1B5 /* XmlParserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XmlParserManager.swift; sourceTree = "<group>"; };
 		703266771DDF709F006CC1B5 /* FeedListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedListViewController.swift; sourceTree = "<group>"; };
-		703266791DDF7131006CC1B5 /* FeedItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedItemViewController.swift; sourceTree = "<group>"; };
+		7072F4442238210C00458EC1 /* FeedItemWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FeedItemWebViewController.swift; path = RSSwift/FeedItemWebViewController.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,12 +106,12 @@
 				703266441DDF6E3D006CC1B5 /* AppDelegate.swift */,
 				703266751DDF705D006CC1B5 /* XmlParserManager.swift */,
 				703266771DDF709F006CC1B5 /* FeedListViewController.swift */,
-				703266791DDF7131006CC1B5 /* FeedItemViewController.swift */,
 				703266481DDF6E3D006CC1B5 /* Main.storyboard */,
 				7032664E1DDF6E3D006CC1B5 /* Assets.xcassets */,
 				703266501DDF6E3D006CC1B5 /* LaunchScreen.storyboard */,
 				703266531DDF6E3D006CC1B5 /* Info.plist */,
 				7032664B1DDF6E3D006CC1B5 /* Rsswift.xcdatamodeld */,
+				7072F4442238210C00458EC1 /* FeedItemWebViewController.swift */,
 			);
 			path = Rsswift;
 			sourceTree = "<group>";
@@ -197,7 +197,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0810;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = ArledKola;
 				TargetAttributes = {
 					703266401DDF6E3D006CC1B5 = {
@@ -273,8 +273,8 @@
 			files = (
 				703266451DDF6E3D006CC1B5 /* AppDelegate.swift in Sources */,
 				703266781DDF709F006CC1B5 /* FeedListViewController.swift in Sources */,
-				7032667A1DDF7131006CC1B5 /* FeedItemViewController.swift in Sources */,
 				703266761DDF705D006CC1B5 /* XmlParserManager.swift in Sources */,
+				7072F4452238210C00458EC1 /* FeedItemWebViewController.swift in Sources */,
 				7032664D1DDF6E3D006CC1B5 /* Rsswift.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -343,6 +343,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -350,6 +351,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -400,6 +402,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -407,6 +410,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -442,6 +446,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Rsswift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ArledKola.Rsswift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -455,6 +460,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Rsswift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ArledKola.Rsswift;
 				PRODUCT_NAME = "$(TARGET_NAME)";

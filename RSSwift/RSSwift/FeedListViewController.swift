@@ -57,7 +57,7 @@ class FeedListViewController: UITableViewController, XMLParserDelegate {
             let selectedFURL: String = (myFeed[indexPath.row] as AnyObject).object(forKey: "link") as! String
 
             // Instance of our feedpageviewcontrolelr.
-            let fivc: FeedItemViewController = segue.destination as! FeedItemViewController
+            let fivc: FeedItemWebViewController = segue.destination as! FeedItemWebViewController
             fivc.selectedFeedURL = selectedFURL as String
         }
     }
