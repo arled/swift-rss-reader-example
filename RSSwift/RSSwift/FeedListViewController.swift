@@ -32,7 +32,7 @@ class FeedListViewController: UITableViewController, XMLParserDelegate {
     }
 
     func loadData() {
-        url = URL(string: "http://feeds.skynews.com/feeds/rss/technology.xml")!
+        url = URL(string: "https://www.nasa.gov/rss/dyn/breaking_news.rss")!
         loadRss(url);
     }
 
