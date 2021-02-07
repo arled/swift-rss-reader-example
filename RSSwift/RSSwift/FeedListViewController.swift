@@ -17,7 +17,7 @@ class FeedListViewController: UITableViewController, XMLParserDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 140
         tableView.backgroundColor = UIColorFromRGB(rgbValue: 0xdf4926)
         self.tableView.dataSource = self
