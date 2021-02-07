@@ -5,7 +5,7 @@
 Clone repo and run via Xcode:
 
 ```sh
-$ git clone git@github.com:arled/swift-rss-reader-example.gi
+$ git clone git@github.com:arled/swift-rss-reader-example.git
 ```
 
 > Swift Compiler Language: Swift 5
