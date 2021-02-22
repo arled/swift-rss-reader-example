@@ -10,7 +10,7 @@ $ git clone git@github.com:arled/swift-rss-reader-example.git
 
 > Swift Compiler Language: Swift 5
 
-> RSS feed url used: NAS breaking news: `https://www.nasa.gov/rss/dyn/breaking_news.rss`
+> RSS feed url used: NASA breaking news: `https://www.nasa.gov/rss/dyn/breaking_news.rss`
 
 ### More NASA RSS feeds
 
