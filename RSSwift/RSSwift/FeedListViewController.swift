@@ -57,8 +57,8 @@ class FeedListViewController: UITableViewController, XMLParserDelegate {
             let selectedFURL: String = (myFeed[indexPath.row] as AnyObject).object(forKey: "link") as! String
 
             // Instance of our feedpageviewcontrolelr.
-            let fivc: FeedItemWebViewController = segue.destination as! FeedItemWebViewController
-            fivc.selectedFeedURL = selectedFURL as String
+            let fiwvc: FeedItemWebViewController = segue.destination as! FeedItemWebViewController
+            fiwvc.selectedFeedURL = selectedFURL as String
         }
     }
 
@@ -73,27 +73,27 @@ class FeedListViewController: UITableViewController, XMLParserDelegate {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        cell.textLabel?.backgroundColor = UIColor.clear
-        cell.detailTextLabel?.backgroundColor = UIColor.clear
-
+        let cellBGColorView = UIView()
+        let cellImageLayer: CALayer?  = cell.imageView?.layer
+        let url = NSURL(string:feedImgs[indexPath.row] as! String)
+        let data = NSData(contentsOf:url! as URL)
+        var image = UIImage(data:data! as Data)
+        
+        image = resizeImage(image: image!, toTheSize: CGSize(width: 70, height: 70))
+        
+        cellImageLayer!.cornerRadius = 35
+        cellImageLayer!.masksToBounds = true
+        cellBGColorView.backgroundColor = .orange
+        
         if indexPath.row % 2 == 0 {
             cell.backgroundColor = UIColor(white: 1, alpha: 0)
         } else {
             cell.backgroundColor = UIColor(white: 1, alpha: 0.1)
         }
-
-        // Load feed iamge.
-        let url = NSURL(string:feedImgs[indexPath.row] as! String)
-        let data = NSData(contentsOf:url! as URL)
-        var image = UIImage(data:data! as Data)
-
-        image = resizeImage(image: image!, toTheSize: CGSize(width: 70, height: 70))
-
-        let cellImageLayer: CALayer?  = cell.imageView?.layer
-
-        cellImageLayer!.cornerRadius = 35
-        cellImageLayer!.masksToBounds = true
-
+        
+        cell.textLabel?.backgroundColor = UIColor.clear
+        cell.detailTextLabel?.backgroundColor = UIColor.clear
+        cell.selectedBackgroundView = cellBGColorView
         cell.imageView?.image = image
         cell.textLabel?.text = (myFeed.object(at: indexPath.row) as AnyObject).object(forKey: "title") as? String
         cell.textLabel?.textColor = UIColor.white
